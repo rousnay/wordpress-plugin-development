@@ -2,11 +2,11 @@
 
 
 
-// exit if file is called directly
+// disable direct file access
 if ( ! defined( 'ABSPATH' ) ) {
-
+	
 	exit;
-
+	
 }
 
 
@@ -21,7 +21,7 @@ function myplugin_add_sublevel_menu() {
 		string   $page_title,
 		string   $menu_title,
 		string   $capability,
-		string   $menu_slug,
+		string   $menu_slug, 
 		callable $function = ''
 	);
 	
@@ -29,8 +29,8 @@ function myplugin_add_sublevel_menu() {
 	
 	add_submenu_page(
 		'options-general.php',
-		'MyPlugin Settings',
-		'MyPlugin',
+		esc_html__('MyPlugin Settings', 'myplugin'),
+		esc_html__('MyPlugin', 'myplugin'),
 		'manage_options',
 		'myplugin',
 		'myplugin_display_settings_page'
@@ -59,8 +59,8 @@ function myplugin_add_toplevel_menu() {
 	*/
 	
 	add_menu_page(
-		'MyPlugin Settings',
-		'MyPlugin',
+		esc_html__('MyPlugin Settings', 'myplugin'),
+		esc_html__('MyPlugin', 'myplugin'),
 		'manage_options',
 		'myplugin',
 		'myplugin_display_settings_page',
@@ -70,3 +70,5 @@ function myplugin_add_toplevel_menu() {
 	
 }
 // add_action( 'admin_menu', 'myplugin_add_toplevel_menu' );
+
+
