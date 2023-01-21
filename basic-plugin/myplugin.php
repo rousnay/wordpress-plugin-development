@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name:  Basic Plugin
+Plugin Name:  MyPlugin
 Description:  A WordPress Plugin with core features
 Plugin URI:   https://wittyplex.com/wordpress
 Author:       Mozahidur Rahman
